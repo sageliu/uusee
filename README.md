@@ -18,6 +18,31 @@ npm run dev-web
 npm run dev-node
 ```
 
+## 合作开发规范
+> 分支
+- 主分支 `master`
+- 开发环境分支 `develop`
+- - 每个人在`develop`下建立自己的分支
+>- 分支切换命令`git checkout 分支名` ，如果没有则创建并切换，有则切换
+
+> 代码合并
+- 如果你的代码本地运行没有问题，将自己的代码提交到自己的分支
+```
+git add .
+git commit -m '你需要写的注释内容'
+git pull origin 你的分支名
+git push origin 你的分支名
+```
+- 将自己的代码提交到develop分支 
+```
+git checkout develop
+git merge 你的分支名
+```
+- 再切回你自己的分支进行代码的开发
+```
+git checkout 你的分支名
+``` 
+
 ## 引入了weUI
 > demo地址：`https://weui.io/`
 
