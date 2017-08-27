@@ -1,11 +1,16 @@
-## 初始化项目
+## 克隆项目
 ```
-npm init -y
+git clone https://github.com/sageliu/uusee.git
 ```
 
-## 安装必备插件 -- 使用者直接  `npm install` 即可
+## 进到对应目录
 ```
-此处略过插件列表，详见package.json文件
+cd uusee
+```
+
+## 安装必备插件 -- (插件列表详见package.json文件)
+```
+npm install
 ```
 
 ## 项目启动方式(本地启动项目)
@@ -54,4 +59,22 @@ git checkout 你的分支名
 - 修改`style=''` 为对象形式 `style={}`,注意如果使用变量，需要再包裹一层`{}`
 - 将未闭合的标签进行闭合，如拷贝过来的是`<img src....>`这样 ， 应在最后增加闭合，修改为`<img src.... />`
 - 其他问题暂未碰到，后续补充
+
+## 我们的代码主要写在`client`文件夹下
+> 下面简单介绍下`client`下存放的每个文件夹的作用及规范
+- components    组件的文件夹
+- - Wrap  有header和footer的页面的包裹层    --不建议操作
+- - MHeader     公共头部    -- 目前没有写
+- - MFooter     公共底部    -- 目前只是写了一个临时版本的
+- - 注意这里的文件夹的下级目录建议一个index.js，一个index.less(视实际情况添加) 
+- containers    页面级组件文件夹
+- - Home        主页       -- 需要完善
+- - profile     个人中心页  -- 需要完善
+- main          入口文件文件夹
+- - main.js     项目入口文件
+- redux         redux相关内容文件夹    -- 现在是空的，预留
+- template      模板文件夹
+- - fullPage      没有header和footer的页面的模板， -- 预留
+- - index.html  主模板文件
+
 
