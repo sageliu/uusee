@@ -1,10 +1,36 @@
-import React,{Component} from 'react';
-export default class MFooter extends Component{
-  render(){
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
+import './index.less'
+export default class MFooter extends Component {
+  render() {
+    let style1 = {position: 'absolute', top: '-2px', right: '-13px'};
+    let style2 = {position: 'absolute', top: '0', right: '-6px'};
     return (
-      <div>
-        MFooter
+      <div className="weui-tabbar">
+        <NavLink to='/' className="weui-tabbar__item weui-bar__item_on">
+                    <span className="com1">
+                      <i className="weui-tabbar__icon  iconfont icon-video"></i>
+                        <span className="weui-badge" style={style1}>8</span>
+                    </span>
+          <p className="weui-tabbar__label">主页</p>
+        </NavLink>
+        <NavLink to='/rank' className="weui-tabbar__item">
+          <i className="weui-tabbar__icon  iconfont icon-training"></i>
+          <p className="weui-tabbar__label">排行榜</p>
+        </NavLink>
+        <NavLink to='/' className="weui-tabbar__item">
+                    <span className='com1'>
+                      <i  className="weui-tabbar__icon iconfont icon-jewelry"></i>
+                        <span className="weui-badge weui-badge_dot" style={style2}></span>
+                    </span>
+          <p className="weui-tabbar__label">发现</p>
+        </NavLink>
+        <NavLink to='/profile' className="weui-tabbar__item">
+          <i className="weui-tabbar__icon  iconfont icon-account"></i>
+          <p className="weui-tabbar__label">我</p>
+        </NavLink>
       </div>
+
     )
   }
 }
