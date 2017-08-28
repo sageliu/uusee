@@ -6,7 +6,7 @@ import Profile from "../containers/Profile/index";
 import Wrap from "../components/Wrap/index";
 import Rank from "../containers/Rank/index";
 ReactDOM.render(
-    <Router>
+  <Router>
     <Wrap>
       <Route exact path="/" component={Home} />
       <Route exact path="/rank" component={Rank} />
