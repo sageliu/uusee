@@ -77,4 +77,16 @@ git checkout 你的分支名
 - - fullPage      没有header和footer的页面的模板， -- 预留
 - - index.html  主模板文件
 
+## router文件夹下
+> 主要存放的是api接口
+- 本地启动node服务端
+```
+npm run dev-node
+```
+- 可以本地测试一下接口
+```
+http://localhost:16666/api/homepage
+```
+对应的是 `mock` 文件夹下的`api`文件夹下的`homePage.json`中的数据
+
 
