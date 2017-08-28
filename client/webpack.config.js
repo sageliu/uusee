@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     vendor: ['babel-polyfill', 'react', 'react-dom', 'redux', 'react-redux', 'react-router-dom'],
     main: './main/main.js',
-    fullPage: './fullPage/index.js'
+    fullPage: './template/fullPage/index.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
