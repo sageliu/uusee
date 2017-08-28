@@ -5,9 +5,9 @@ import Home from '../containers/Home'
 import Profile from "../containers/Profile/index";
 import Wrap from "../components/Wrap/index";
 ReactDOM.render(
-  <Router>
+    <Router>
     <Wrap>
-      <Route exact path="/" component={Home}/>
+      <Route exact path="/" component={Home} />
       <Route path="/profile" component={Profile}/>
     </Wrap>
   </Router>
