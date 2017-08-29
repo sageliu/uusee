@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Dialog from "../../components/Dialog/index";
-import update from '../../until/updataImg'
+
 export default class Join extends Component{
   constructor(){
     super();
@@ -11,10 +11,12 @@ export default class Join extends Component{
     }
   }
   setUrl=()=>{
-    debugger
+    // debugger
     this.setState({
       imgUrl:this.refs.updateBtn.value
     })
+    let p=this.refs.updateImg
+    update(p)
   }
   handleSubmit=()=>{
     if(!this.state.imgUrl){
@@ -28,19 +30,19 @@ export default class Join extends Component{
   }
   changeImg=()=>{
     console.log(this.refs.updateBtn.value);
-    this.refs.updateImg.style.background='url('+this.state.imgUrl+') no-repeat';
+    updataImg(this.refs.updateBtn,this.refs.updateImg,{DivShow})
+    // this.refs.updateImg
   }
   render(){
     return (
-      <div>
-        <Dialog isShow={this.state.isShow}/>
-        <form className="wrap" onSubmit={()=>this.handleSubmit} >
+      <div className="wrap" >
+        <form onSubmit={()=>this.handleSubmit} >
           <div className="joinInfo">
-            <div className="imgBtn" onClick={this.handleUpdateImg}>
+            <div className="imgBtn" onClick={this.handleUpdateImg} id="DivShow">
               <i className="iconfont icon-add"></i>
               <span>封面</span>
             </div>
-            <p ref='updateImg'/>
+            <img ref='updateImg' className="image"/>
             <input type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
             <textarea name="title" id="" cols="30" rows="5" defaultValue='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
           </div>
@@ -55,8 +57,10 @@ export default class Join extends Component{
           </span>
           </label>
         </form>
+          {/*<Dialog isShow={this.state.isShow}/>*/}
       </div>
     )
   }
 }
 import './index.less'
+import updataImg from "../../until/updataImg";
