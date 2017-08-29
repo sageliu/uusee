@@ -46,11 +46,11 @@ module.exports = {
     },
     proxy: {
       '/api': {
-        target: 'http://localhost:16666/api',
+        target: 'http://localhost:19999/api',
         pathRewrite: {"^/api" : ""}
       },
       '/login': {
-        target: 'http://localhost:16666/login',
+        target: 'http://localhost:19999/login',
         pathRewrite: {"^/login" : ""}
       }
     }
