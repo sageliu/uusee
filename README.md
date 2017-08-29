@@ -42,6 +42,7 @@ git push origin 你的分支名
 ```
 git checkout develop
 git merge 你的分支名
+git push origin develop
 ```
 - 再切回你自己的分支进行代码的开发
 ```
@@ -77,7 +78,7 @@ git checkout 你的分支名
 - - fullPage      没有header和footer的页面的模板， -- 预留
 - - index.html  主模板文件
 
-## router文件夹下
+## router文件夹下 【这个是koa的后台使用的，目前不要用】
 > 主要存放的是api接口
 - 本地启动node服务端
 ```

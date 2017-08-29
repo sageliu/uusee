@@ -17,7 +17,7 @@ export default function (targetTag,ImgType=["gif", "jpeg", "jpg", "bmp", "png"])
       //document.getElementById(_this.Setting.ImgShow).src = _this.getObjectURL(this.files[0]);
 
     } catch (e) {
-      //IE，目前缩略图展示有问题，需要和原始的比对来进行事先缩略图的显示
+      //IE，目前缩略图展示有问题，需要和=原始的比对来进行事先缩略图的显示
 
       this.select();
       top.parent.document.body.focus();
