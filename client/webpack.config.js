@@ -27,6 +27,11 @@ module.exports = {
       {
         test: /\.(less|css)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+      },
+      {test: /.(jpg|png|gif|svg)$/, use: ['url-loader?limit=8192&name=./[name].[ext]']},/*解析图片*/
+      {
+        test:/\.(eot|svg|woff|woff2|ttf)$/,//如果是bootstrap中的这五种字体的话
+        loader:'url-loader'
       }
     ]
   },
