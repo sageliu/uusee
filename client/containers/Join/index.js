@@ -1,14 +1,20 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
+import Dialog from "../../components/Dialog/index";
 export default class Join extends Component{
   constructor(){
     super();
     this.state={
-      imgUrl:''
+      imgUrl:'',
+      isShow:false
     }
   }
   handleSubmit=()=>{
-
+    if(!this.state.imgUrl){
+      this.setState({
+        isShow:true
+      })
+    }
   }
   hac=()=>{
     alert(1)
@@ -33,7 +39,7 @@ export default class Join extends Component{
           </div>
           <p alt="" ref='updateImg'/>
           <input required type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
-          <textarea name="title" id="" cols="30" rows="5" value='输入标题更吸引粉丝哦'></textarea>
+          <textarea name="title" id="" cols="30" rows="5" value='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
         </div>
         <div className="weui-btn weui-btn_plain-default">
           开启直播
@@ -46,7 +52,9 @@ export default class Join extends Component{
             开通默认遵守<Link to="/join/rules">《一起直播相关条款》</Link>
           </span>
         </label>
+        <Dialog isShow={this.state.isShow}/>
       </form>
+
     )
   }
 }

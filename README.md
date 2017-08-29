@@ -89,4 +89,7 @@ http://localhost:16666/api/homepage
 ```
 对应的是 `mock` 文件夹下的`api`文件夹下的`homePage.json`中的数据
 
+## mock文件夹下
+> 主要存放的是模拟的数据
+- 放在`api`文件夹下，例如`homePage.json`文件夹存放的是主页的数据
 
