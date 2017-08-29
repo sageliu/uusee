@@ -1,5 +1,4 @@
-export default function (targetTag,ImgType) {
-  let ImgType=ImgType|| ["gif", "jpeg", "jpg", "bmp", "png"]
+export default function (targetTag,ImgType=["gif", "jpeg", "jpg", "bmp", "png"]) {
   if (this.value) {
     if (!RegExp("\.(" + ImgType.join("|") + ")$", "i").test(this.value.toLowerCase())) {
       alert(_this.Setting.ErrMsg);
