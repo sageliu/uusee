@@ -26,7 +26,7 @@ export default class Join extends Component{
   }
   changeImg=()=>{
     console.log(this.refs.updateBtn.value);
-    this.refs.updateImg.setAttribute('src',this.state.imgUrl)
+    this.refs.updateImg.style.background='url('+this.state.imgUrl+') no-repeat';
   }
   render(){
     return (
@@ -36,9 +36,9 @@ export default class Join extends Component{
             <i className="iconfont icon-add"></i>
             <span>封面</span>
           </div>
-          <p alt="" ref='updateImg'/>
+          <p ref='updateImg'/>
           <input type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
-          <textarea name="title" id="" cols="30" rows="5" value='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
+          <textarea name="title" id="" cols="30" rows="5" defaultValue='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
         </div>
         <div className="weui-btn weui-btn_plain-default">
           开启直播
