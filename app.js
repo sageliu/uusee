@@ -10,7 +10,7 @@ const convert = require('koa-convert');
 const cors = require('koa-cors');
 const serve = require('koa-static-server');
 const bodyParser = require('koa-bodyparser');
-
+// const staticServer = require('koa-static');//静态文件
 let isDev = process.env.NODE_ENV === 'develop'; // 是否是开发环境
 
 app.use(bodyParser()); // 解析HTTP请求体
@@ -19,8 +19,10 @@ app.use(convert(cors())); // 允许跨域
 
 // isDev && app.use(require('./middleware/sleep.js')); // 开发环境 延迟模拟
 
-require('./router')(app); // 初始化路由信息
 
+
+require('./router')(app); // 初始化路由信息
+// app.use(staticServer( path.join(__dirname,  './node_modules')));//
 app.use(serve({rootDir: path.join(__dirname, './static'), rootPath: '/static/'})); // 本地静态服务器，主要给图片使用
 
 !isDev && app.use(serve({rootDir: path.join(__dirname, './dist'), rootPath: '/'})); // 线上的静态路由
