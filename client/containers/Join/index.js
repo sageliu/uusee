@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Dialog from "../../components/Dialog/index";
+import update from '../../until/updataImg'
 export default class Join extends Component{
   constructor(){
     super();
@@ -30,7 +31,7 @@ export default class Join extends Component{
   }
   render(){
     return (
-      <form className="wrap" onSubmit={()=>this.handleSubmit}>
+      <form className="wrap" onSubmit={()=>this.handleSubmit} >
         <div className="joinInfo">
           <div className="imgBtn" onClick={this.handleUpdateImg}>
             <i className="iconfont icon-add"></i>

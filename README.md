@@ -96,5 +96,5 @@ http://localhost:16666/api/homepage
 
 ## 关于自己模拟数据
 > 
-- 监听请求写在`router/api.js`中，
+- 监听请求写在`server.js`中，
 - 模拟的数据写在`mock/api/`这个文件夹下，自己对应的写一个json文件
