@@ -10,17 +10,18 @@ export default class Join extends Component{
       isShow:false
     }
   }
+  setUrl=()=>{
+    debugger
+    this.setState({
+      imgUrl:this.refs.updateBtn.value
+    })
+  }
   handleSubmit=()=>{
     if(!this.state.imgUrl){
       this.setState({
         isShow:true
       })
     }
-  }
-  hac=()=>{
-    this.setState({
-      imgUrl:this.refs.updateBtn.value
-    })
   }
   handleUpdateImg=()=>{
     this.refs.updateBtn.click()
@@ -43,7 +44,7 @@ export default class Join extends Component{
             <input type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
             <textarea name="title" id="" cols="30" rows="5" defaultValue='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
           </div>
-          <button type="submit" className="weui-btn weui-btn_plain-default">
+          <button type="submit" className="weui-btn weui-btn_plain-default" onClick={this.setUrl}>
             开启直播
           </button>
           <Link to="/" className="weui-btn weui-btn-2 weui-btn_plain-default">不开启</Link>
