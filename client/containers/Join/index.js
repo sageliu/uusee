@@ -17,16 +17,15 @@ export default class Join extends Component{
     }
   }
   hac=()=>{
-    alert(1)
+    this.setState({
+      imgUrl:this.refs.updateBtn.value
+    })
   }
   handleUpdateImg=()=>{
     this.refs.updateBtn.click()
   }
   changeImg=()=>{
     console.log(this.refs.updateBtn.value);
-    this.setState({
-      imgUrl:this.refs.updateBtn.value
-    })
     this.refs.updateImg.setAttribute('src',this.state.imgUrl)
   }
   render(){
@@ -38,7 +37,7 @@ export default class Join extends Component{
             <span>封面</span>
           </div>
           <p alt="" ref='updateImg'/>
-          <input required type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
+          <input type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
           <textarea name="title" id="" cols="30" rows="5" value='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
         </div>
         <div className="weui-btn weui-btn_plain-default">

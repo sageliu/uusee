@@ -6,7 +6,7 @@ export default class Dialog extends Component{
   }
 
   render(){
-    debugger
+    // debugger
     return (
       <div className="js_dialog" ref="dialog2" style={this.props.isShow?{opacity:1}:{opacity:0}}>
         <div className="weui-mask"></div>

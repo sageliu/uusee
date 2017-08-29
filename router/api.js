@@ -13,6 +13,10 @@ module.exports = (router) => {
 
     ctx.body = rankList
   });
+  router.get('/api/join',async(ctx,next)=>{
+
+    // fs.writeFile(path.join(__dirname,'../mock/api/join.json'),)
+  })
 
 /*  // 【存储】保存我的信息
   router.post('/api/setmyinfo', async (ctx, next) => {

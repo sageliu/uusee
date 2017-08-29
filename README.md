@@ -94,3 +94,7 @@ http://localhost:16666/api/homepage
 - 放在`api`文件夹下，例如`homePage.json`文件夹存放的是主页的数据
 - 如果需要创造数据，请写到对应页面的json文件中
 
+## 关于自己模拟数据
+> 
+- 监听请求写在`router/api.js`中，
+- 模拟的数据写在`mock/api/`这个文件夹下，自己对应的写一个json文件
