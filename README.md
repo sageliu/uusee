@@ -92,4 +92,5 @@ http://localhost:16666/api/homepage
 ## mock文件夹下
 > 主要存放的是模拟的数据
 - 放在`api`文件夹下，例如`homePage.json`文件夹存放的是主页的数据
+- 如果需要创造数据，请写到对应页面的json文件中
 
