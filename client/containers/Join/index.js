@@ -36,6 +36,7 @@ export default class Join extends Component{
     console.log(this.refs.updateBtn);
   }
   render(){
+    // console.log(this.props);
     return (
       <div className="wrap">
         <form onSubmit={this.handleSubmit} action="/api/join" method="post" encType="multipart/form-data">
