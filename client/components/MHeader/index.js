@@ -21,6 +21,9 @@ class MHeader extends Component{
       case '/rank':
         this.title='rank';
         break;
+      case '/login':
+            this.title='登录';
+            break;
       default:
         this.title='一起直播'
     }
