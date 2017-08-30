@@ -140,7 +140,6 @@ export default function (curTag,tarTag,setting) {
       }
     } else {
       //chrome/FF缩略图
-      debugger
       tarTag.src = _this.getObjectURL(curTag.files[0]);
       tarTag.style.zIndex=1;
     }
