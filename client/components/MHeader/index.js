@@ -12,7 +12,7 @@ export default class MHeader extends Component{
         <div className="weui-navbar">
           <div className="weui-navbar__item">
             <div onClick={()=>{}} className="backBtn"/>
-            HEADER
+            {this.props.title}
           </div>
         </div>
       </div>
