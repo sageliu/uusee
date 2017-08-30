@@ -25,7 +25,7 @@ export default class MFooter extends Component {
                     </span>
           <p className="weui-tabbar__label">加入</p>
         </NavLink>
-        <NavLink to='/profile' className="weui-tabbar__item"  activeClassName="weui-bar__item_on">
+        <NavLink to='/profile/profilemain' className="weui-tabbar__item"  activeClassName="weui-bar__item_on">
           <i className="weui-tabbar__icon  iconfont icon-account"></i>
           <p className="weui-tabbar__label">我</p>
         </NavLink>
