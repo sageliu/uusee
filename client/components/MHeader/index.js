@@ -7,7 +7,7 @@ class MHeader extends Component{
     this.props.history.goBack()
   }
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     switch (this.props.location.pathname){
       case '/':
         this.title='首页';
