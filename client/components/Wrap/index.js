@@ -6,8 +6,8 @@ export default class Wrap extends Component{
 
   render(){
     return (
-      <div style={{height:'100%'}}>
-        <MHeader/>
+      <div  style={{height:'100%'}}>
+        <MHeader title="header"/>
         <div className="content">
           {this.props.children}
         </div>
