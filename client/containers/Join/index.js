@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Dialog from "../../components/Dialog/index";
+import updataImg from "../../until/updataImg";
 
 export default class Join extends Component{
   constructor(){
@@ -16,7 +17,7 @@ export default class Join extends Component{
       imgUrl:this.refs.updateBtn.value
     })
     let p=this.refs.updateImg
-    update(p)
+    console.log(p);
   }
   handleSubmit=()=>{
     if(!this.state.imgUrl){
@@ -24,19 +25,20 @@ export default class Join extends Component{
         isShow:true
       })
     }
+    console.log(this.state.imgUrl);
   }
-  handleUpdateImg=()=>{
+  handleUpdateImg=()=>{//点击上传按钮
     this.refs.updateBtn.click()
   }
-  changeImg=()=>{
+  changeImg=()=>{//上传文件完成
     console.log(this.refs.updateBtn.value);
     updataImg(this.refs.updateBtn,this.refs.updateImg,{DivShow})
-    // this.refs.updateImg
+    console.log(this.refs.updateBtn);
   }
   render(){
     return (
-      <div className="wrap" >
-        <form onSubmit={()=>this.handleSubmit} >
+      <div className="wrap">
+        <form onSubmit={this.handleSubmit} action="/api/join" method="post" encType="multipart/form-data">
           <div className="joinInfo">
             <div className="imgBtn" onClick={this.handleUpdateImg} id="DivShow">
               <i className="iconfont icon-add"></i>
@@ -63,4 +65,3 @@ export default class Join extends Component{
   }
 }
 import './index.less'
-import updataImg from "../../until/updataImg";
