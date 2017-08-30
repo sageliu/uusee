@@ -52,6 +52,8 @@ git push origin develop
 - 再切回你自己的分支进行代码的开发
 ```
 git checkout 你的分支名
+git merge develop
+尽情的开发吧
 ``` 
 
 ## 引入了weUI
