@@ -21,7 +21,7 @@ app.use(convert(cors())); // 允许跨域
 
 
 
-require('./router')(app); // 初始化路由信息
+require('./router/homepage')(app); // 初始化路由信息
 // app.use(staticServer( path.join(__dirname,  './node_modules')));//
 app.use(serve({rootDir: path.join(__dirname, './static'), rootPath: '/static/'})); // 本地静态服务器，主要给图片使用
 

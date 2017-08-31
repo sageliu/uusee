@@ -85,18 +85,6 @@ git merge develop
 - - fullPage      没有header和footer的页面的模板， -- 预留
 - - index.html  主模板文件
 
-## router文件夹下 【这个是koa的后台使用的，目前不要用】
-> 主要存放的是api接口
-- 本地启动node服务端
-```
-npm run dev-node
-```
-- 可以本地测试一下接口
-```
-http://localhost:16666/api/homepage
-```
-对应的是 `mock` 文件夹下的`api`文件夹下的`homePage.json`中的数据
-
 ## mock文件夹下
 > 主要存放的是模拟的数据
 - 放在`api`文件夹下，例如`homePage.json`文件夹存放的是主页的数据
@@ -106,3 +94,23 @@ http://localhost:16666/api/homepage
 > 
 - 监听请求写在`server.js`中，
 - 模拟的数据写在`mock/api/`这个文件夹下，自己对应的写一个json文件
+
+## router文件夹下
+> 主要存放的是api接口
+- 每个人自己建立一个js文件，存放自己的接口API，可以参照index.js中的写法进行编写
+- 然后再`index.js`文件中，将自己的接口调用一下，增加类似下面的一行代码即可
+```
+  RouterAll.use(require('./自己的文件名.js'));
+```
+- 测试本地接口的前置条件：本地启动node服务端
+```
+npm run dev-node
+```
+- 可以本地测试一下接口
+```
+http://localhost:19999/api/homepage
+http://localhost:19999/api/自己的文件名   注意这样的方式只能测试get 的请求
+```
+`http://localhost:19999/api/homepage`接口返回的是 `mock/api/`文件夹下的`homePage.json`中的数据
+
+## 
