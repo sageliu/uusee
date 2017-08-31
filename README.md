@@ -31,22 +31,29 @@ npm run dev-node
 >- 分支切换命令`git checkout 分支名` ，如果没有则创建并切换，有则切换
 
 > 代码合并
-- 如果你的代码本地运行没有问题，将自己的代码提交到自己的分支
+- 如果你的代码本地运行没有问题，将自己的代码提交到自己的历史区
 ```
 git add .
 git commit -m '你需要写的注释内容'
-git pull origin 你的分支名
-git push origin 你的分支名
+
 ```
 - 将自己的代码提交到develop分支 
 ```
 git checkout develop
 git merge 你的分支名
+git pull origin develop
+-----------------------------
+这个时候需要关注一下有没有冲突
+git status 
+反馈红色的文件是有冲突的文件
+-----------------------------
 git push origin develop
 ```
 - 再切回你自己的分支进行代码的开发
 ```
 git checkout 你的分支名
+git merge develop
+尽情的开发吧
 ``` 
 
 ## 引入了weUI

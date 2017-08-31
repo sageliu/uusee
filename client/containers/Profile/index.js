@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+
 import './index.less';
 import {
   HashRouter as Router,
@@ -13,6 +14,17 @@ export default class Profile extends Component{
   constructor(){
     super();
     this.state={img:tou,flag:true,createTime:''}
+  }
+  render(){
+    return (
+      <div>
+          <div className="profile_bg">
+              <Link to={"/login"} className="login_btn" href="">登录</Link>
+          </div>
+        Profile
+      </div>
+    )
+
   }
     getTime=()=>{
         console.log(+new Date());
