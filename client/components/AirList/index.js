@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import './css.less';
 
 export default class AirList extends Component{
     render(){
@@ -30,3 +29,4 @@ export default class AirList extends Component{
         )
     }
 }
+import './index.less';

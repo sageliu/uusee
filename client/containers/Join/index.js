@@ -11,14 +11,7 @@ export default class Join extends Component{
       isShow:false
     }
   }
-  setUrl=()=>{
-    // debugger
-    this.setState({
-      imgUrl:this.refs.updateBtn.value
-    })
-    let p=this.refs.updateImg
-    console.log(p);
-  }
+
   handleSubmit=()=>{
     if(!this.state.imgUrl){
       this.setState({
@@ -31,10 +24,10 @@ export default class Join extends Component{
     this.refs.updateBtn.click()
   }
   changeImg=()=>{//上传文件完成
-    console.log(this.refs.updateBtn.value,'xxxxxxxxxxx');
+    console.log(this.refs.updateBtn.value);
     updataImg(this.refs.updateBtn,this.refs.updateImg,{DivShow})
     // updataImg(实际存放图片的input标签的dom元素,显示缩略图的img标签的dom元素,{触发上传的按钮的dom元素的ID})
-    console.log(this.refs.updateBtn);
+
   }
   render(){
     // console.log(this.props);
@@ -46,7 +39,7 @@ export default class Join extends Component{
               <i className="iconfont icon-add"></i>
               <span>封面</span>
             </div>
-            <img ref='updateImg' className="image"/>
+            <img ref='updateImg' className="image" onClick={this.handleUpdateImg}/>
             <input type="file" ref="updateBtn" onChange={this.changeImg} name="imgUrl"/>
             <textarea name="title" id="" cols="30" rows="5" defaultValue='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
           </div>

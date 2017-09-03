@@ -14,7 +14,7 @@ export default class MFooter extends Component {
                     </span>
           <p className="weui-tabbar__label">主页</p>
         </NavLink>
-        <NavLink to='/rank' className="weui-tabbar__item"  activeClassName="weui-bar__item_on">
+        <NavLink to='/rank/onList' className="weui-tabbar__item"  activeClassName="weui-bar__item_on">
           <i className="weui-tabbar__icon  iconfont icon-training"></i>
           <p className="weui-tabbar__label">排行榜</p>
         </NavLink>

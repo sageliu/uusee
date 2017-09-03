@@ -23,7 +23,8 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
     <Wrap>
       <Route exact path="/" component={Home} />
-      <Route path="/rank" component={Rank} />
+      <Route exact path="/rank/onList" component={Rank} />
+      <Route exact path="/rank/unList" component={Rank} />
       <Route path="/profile" component={Profile}/>
       <Route path="/profile/myhome" component={Myhome}/>
       <Route exact path="/join" component={Join}/>

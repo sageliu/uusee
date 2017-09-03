@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev-web": "cross-env NODE_ENV=develop webpack-dev-server --config ./client/webpack.config.js",
+    "dev-web-localIp": "cross-env NODE_ENV=develop webpack-dev-server --config ./client/webpack.config.js --host 0.0.0.0",
     "dev-node": "cross-env NODE_ENV=develop nodemon server.js",
     "dev-node-base": "cross-env NODE_ENV=develop node server.js",
     "build-web": "cross-env NODE_ENV=production webpack -p --config ./client/webpack.config.js",

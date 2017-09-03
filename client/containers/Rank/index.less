@@ -19,9 +19,6 @@ ul li{list-style:none;}
   height:28px;
   line-height:28px;
   border-bottom:1px solid #ccc;
-  position:fixed;
-  top:81px;
-  left:0;
   background:#fff;
   z-index:10;
   li{
@@ -39,24 +36,25 @@ ul li{list-style:none;}
     clear:both;
   }
 }
-.container div{
-  width:100%;
-  /*display:none;*/
-  &.selected{
-    display:block;
-  }
-}
+
 .container{
   position:relative;
 }
 .onList,.unList{
-  position:absolute;
-  top:65px;
-  left:0;
-  padding-bottom:54px;
   box-sizing:border-box;
   overflow:scroll;
 }
 .onList .box .container .text p{
   display: block;
+}
+.scroll-content{
+  height: 100%;
+  overflow: hidden;
+  .data-wrap{
+    padding-top: 60px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+    height: 100%;
+  }
 }

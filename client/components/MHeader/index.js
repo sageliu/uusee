@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom'
-import './index.less'
+import setTitle from './setTitle'
 import {Link} from 'react-router-dom'
 class MHeader extends Component{
   handleBack=()=>{
@@ -8,25 +8,7 @@ class MHeader extends Component{
   }
   render(){
     // console.log(this.props);
-    switch (this.props.location.pathname){
-      case '/':
-        this.title='首页';
-        break;
-      case '/join':
-        this.title='join';
-        break;
-      case '/profile':
-        this.title='profile';
-        break;
-      case '/rank':
-        this.title='rank';
-        break;
-      case '/login':
-            this.title='登录';
-            break;
-      default:
-        this.title='一起直播'
-    }
+    this.title=setTitle(this.props.location.pathname)
     return (
       <div className="weui-tab">
         <div className="weui-navbar">
@@ -40,3 +22,4 @@ class MHeader extends Component{
   }
 }
 export default withRouter(MHeader)
+import './index.less'
