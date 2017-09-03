@@ -31,7 +31,7 @@ class MHeader extends Component{
       <div className="weui-tab">
         <div className="weui-navbar">
           <div className="weui-navbar__item">
-            <div onClick={this.handleBack} className="backBtn"/>
+            <div onClick={this.handleBack} className="backBtn iconfont icon-left"/>
             {this.title?this.title:'一起直播'}
           </div>
         </div>

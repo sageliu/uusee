@@ -31,8 +31,9 @@ export default class Join extends Component{
     this.refs.updateBtn.click()
   }
   changeImg=()=>{//上传文件完成
-    console.log(this.refs.updateBtn.value);
+    console.log(this.refs.updateBtn.value,'xxxxxxxxxxx');
     updataImg(this.refs.updateBtn,this.refs.updateImg,{DivShow})
+    // updataImg(实际存放图片的input标签的dom元素,显示缩略图的img标签的dom元素,{触发上传的按钮的dom元素的ID})
     console.log(this.refs.updateBtn);
   }
   render(){
@@ -46,13 +47,14 @@ export default class Join extends Component{
               <span>封面</span>
             </div>
             <img ref='updateImg' className="image"/>
-            <input type="file" ref="updateBtn" onChange={()=>this.changeImg()} value={this.state.imgUrl} name="imgUrl"/>
+            <input type="file" ref="updateBtn" onChange={this.changeImg} name="imgUrl"/>
             <textarea name="title" id="" cols="30" rows="5" defaultValue='暂未设置标题，输入标题更吸引粉丝哦！！！' ref="title"></textarea>
           </div>
           <button type="submit" className="weui-btn weui-btn_plain-default" onClick={this.setUrl}>
             开启直播
           </button>
           <Link to="/" className="weui-btn weui-btn-2 weui-btn_plain-default">不开启</Link>
+
           <label htmlFor="weuiAgree" className="weui-agree">
             <input type="checkbox" className="weui-agree__checkbox" id="weuiAgree" checked disabled/>
             <span className="weui-agree__text">

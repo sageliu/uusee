@@ -1,1 +1,0 @@
-webpackJsonp([1],{250:function(e,t,r){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}var n=r(8),o=u(n);u(r(67)).default.render(o.default.createElement("div",null,"没有header和footer"),document.querySelector("#root"))}},[250]);

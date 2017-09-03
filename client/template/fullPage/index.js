@@ -2,5 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(<div>
-  没有header和footer
+  fullpageadssssssssssssss
+asdasd
+  <br/>
 </div>, document.querySelector('#root'));
+

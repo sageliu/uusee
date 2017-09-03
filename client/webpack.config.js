@@ -4,12 +4,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 let isDev = process.env.NODE_ENV === 'develop'; // 是否是开发环境
-
+let localhost=!isDev?'localhost':'172.18.1.20';
 module.exports = {
   entry: {
     vendor: ['babel-polyfill', 'react', 'react-dom', 'redux', 'react-redux', 'react-router-dom'],
-    main: './main/main.js',
-    fullPage: './template/fullPage/index.js'
+    main: './main/main.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -61,7 +60,7 @@ module.exports = {
     }
   },
   plugins: [
-    new OpenBrowserPlugin({ url: `http://${"localhost"}:13333/` }),
+    new OpenBrowserPlugin({ url: `http://${localhost}:13333/` }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV':
@@ -80,7 +79,7 @@ module.exports = {
       miniify:{
         collapseWhitespace:true
       }
-    }),
+    })
   ]
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router,Route} from 'react-router-dom'
+// import {HashRouter as Router,Route} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import Home from '../containers/Home'
 import Profile from "../containers/Profile/index";
 import Wrap from "../components/Wrap/index";
@@ -23,8 +24,8 @@ ReactDOM.render(
     <Wrap>
       <Route exact path="/" component={Home} />
       <Route path="/rank" component={Rank} />
-      <Route   path="/profile" component={Profile}/>
-        <Route   path="/profile/myhome" component={Myhome}/>
+      <Route path="/profile" component={Profile}/>
+      <Route path="/profile/myhome" component={Myhome}/>
       <Route exact path="/join" component={Join}/>
       <Route path="/join/rules" component={Rules}/>
       <Route path="/login" component={Login}/>

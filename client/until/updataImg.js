@@ -13,7 +13,9 @@
  *建议请不要自行修改默认的样式名及ID，以防出现无法使用的问题
 
  *调用代码:
- *new uploadPreview({UpBtn: "BtnInputUp0", DivShow: "Up0", ImgShow: "imgShowUp"});
+ *  new uploadPreview({UpBtn: "BtnInputUp0", DivShow: "Up0", ImgShow: "imgShowUp"});  这个是原始的版本的使用方法
+ *此版本的调用方式：
+ *  updataImg(实际存放图片的input标签的dom元素,显示缩略图的img标签的dom元素,{触发上传的按钮的dom元素的ID})
  *参数说明:
  *UpBtn:选择文件控件ID;
  *DivShow:DIV控件ID;
